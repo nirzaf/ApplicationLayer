@@ -23,8 +23,7 @@ namespace DDD.ApplicationLayer
                 var task = (Task)triggerType.GetMethod(nameof(EventTrigger<IEventNotification>.Trigger))
                     .Invoke(trigger, new object[] { ev });
                 await task.ConfigureAwait(false);
-
             }
-        }
+        }  
     }
 }
